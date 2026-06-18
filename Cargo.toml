@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = [
+    "engine",
+    "game",
+]
+
+[workspace.dependencies]
+winit = "0.29"          # Window + input events
+wgpu = "0.19"          # GPU rendering (modern, cross-platform)
+glam = "0.27"          # Fast math: Vec2, Mat3, etc.
+hecs = "0.10"          # Lightweight ECS
+rapier2d = "0.18"      # 2D physics engine
+tokio = { version = "1", features = ["full"] }
+reqwest = "0.11"       # HTTP for LLM API calls
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bytemuck = "1"         # Safe casting for GPU buffers
+log = "0.4"
+env_logger = "0.10"
